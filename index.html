@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MA Tax &amp; Accounting Services · Contabilidad y Planillas en Puerto Rico</title>
+<meta name="description" content="Firma de contabilidad en Puerto Rico liderada por un CPA con licencia. Contabilidad mensual, planillas, IVU/SURI, estados financieros y cumplimiento con Hacienda. Atención personalizada y bilingüe." />
+<meta property="og:title" content="MA Tax & Accounting Services" />
+<meta property="og:description" content="Contabilidad que protege y hace crecer tu negocio. CPA con licencia en Puerto Rico." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#0b1f3a; --navy2:#13355c; --gold:#c9a24a; --gold2:#e6c879;
+    --ink:#0f1d33; --muted:#5a6b82; --bg:#f6f8fc; --surface:#ffffff; --line:#e8edf4;
+    --cream:#fbf8f1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.1;color:var(--navy);font-weight:600;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-weight:700;font-family:'Inter';padding:14px 26px;border-radius:11px;transition:.25s;border:none;box-shadow:0 8px 22px rgba(201,162,74,.32);cursor:pointer;font-size:15px}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,162,74,.45)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);box-shadow:none}
+  .btn-ghost:hover{border-color:var(--gold2);color:var(--gold2);background:rgba(255,255,255,.05)}
+
+  /* reveal animations */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.4s}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:60;transition:.3s}
+  header.scrolled{background:rgba(11,31,58,.92);backdrop-filter:blur(12px);box-shadow:0 6px 24px rgba(11,31,58,.25)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:21px;box-shadow:0 4px 14px rgba(201,162,74,.4)}
+  .brand b{font-family:'Fraunces',serif;font-size:19px;letter-spacing:.2px;font-weight:600}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{color:#d3deec;font-size:14.5px;font-weight:500;transition:.2s}
+  .navlinks a:hover{color:var(--gold2)}
+  .navlinks .btn{padding:10px 20px}
+  @media(max-width:820px){.navlinks a:not(.btn){display:none}}
+
+  /* HERO */
+  .hero{position:relative;color:#fff;padding:120px 0 130px;overflow:hidden;
+    background:radial-gradient(60% 90% at 80% 0%,rgba(201,162,74,.22),transparent 55%),
+               radial-gradient(50% 70% at 0% 100%,rgba(31,90,160,.45),transparent 60%),
+               linear-gradient(135deg,#081831 0%,#13355c 100%)}
+  header{margin-bottom:-86px;position:sticky}
+  .hero .grain{position:absolute;inset:0;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:22px 22px}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+  @media(max-width:920px){.hero .wrap{grid-template-columns:1fr;gap:38px}.hero{padding:104px 0 90px}}
+  .hero .tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(230,200,121,.45);background:rgba(230,200,121,.08);color:var(--gold2);font-size:13px;font-weight:600;padding:7px 15px;border-radius:30px;margin-bottom:24px;letter-spacing:.3px}
+  .hero h1{color:#fff;font-size:clamp(36px,5.4vw,60px);margin-bottom:20px;letter-spacing:-.02em}
+  .hero h1 .grad{background:linear-gradient(120deg,var(--gold2),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{font-size:clamp(16px,2vw,19px);color:#c6d4e6;max-width:600px;margin-bottom:32px}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{margin-top:36px;display:flex;gap:14px 26px;flex-wrap:wrap;color:#9fb1c6;font-size:13.5px}
+  .trust b{color:var(--gold2)}
+  /* hero floating card */
+  .hcard{background:rgba(255,255,255,.07);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:22px;box-shadow:0 30px 70px rgba(0,0,0,.35);animation:float 6s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .hcard .hc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .hcard .seal{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:800;font-family:'Fraunces'}
+  .hcard .pill{font-size:11px;color:#0b1f3a;background:var(--gold2);padding:3px 10px;border-radius:20px;font-weight:700}
+  .hcard h4{color:#fff;font-family:'Inter';font-weight:700;font-size:15px}
+  .hcard .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.09);font-size:13.5px;color:#c6d4e6}
+  .hcard .row b{color:#fff}
+  .hcard .row.tot{border-bottom:none;padding-top:14px}
+  .hcard .row.tot b{color:var(--gold2);font-size:18px}
+
+  /* STATS STRIP */
+  .stats{background:var(--navy);color:#fff;padding:0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 24px}
+  @media(max-width:680px){.stats .wrap{grid-template-columns:1fr 1fr;gap:24px}}
+  .stat{text-align:center}
+  .stat .n{font-family:'Fraunces',serif;font-size:38px;color:var(--gold2);font-weight:600;line-height:1}
+  .stat .l{color:#9fb1c6;font-size:13.5px;margin-top:7px}
+
+  section{padding:90px 0}
+  .eyebrow{color:var(--gold);font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .sec-title{font-size:clamp(28px,3.6vw,42px);margin-bottom:16px}
+  .lead{color:var(--muted);font-size:17px;max-width:680px}
+
+  /* ABOUT */
+  .about{background:var(--surface)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:34px}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:32px}}
+  .about p{color:var(--muted);margin-bottom:16px}
+  .about .card{background:linear-gradient(140deg,var(--navy),var(--navy2));color:#fff;border-radius:20px;padding:38px;box-shadow:0 30px 60px rgba(11,31,58,.22);position:relative;overflow:hidden}
+  .about .card::after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,74,.22),transparent 70%)}
+  .about .card .seal{width:66px;height:66px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:22px;color:var(--gold2);margin-bottom:18px;font-weight:600}
+  .about .card h3{color:#fff;font-size:23px;margin-bottom:6px}
+  .about .card .role{color:var(--gold2);font-size:14px;font-weight:600;margin-bottom:18px}
+  .about .card ul{list-style:none}
+  .about .card li{color:#c6d4e6;font-size:14px;padding:9px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;gap:10px}
+  .about .card li::before{content:"✓";color:var(--gold2);font-weight:700}
+
+  /* SERVICES */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  @media(max-width:820px){.grid3{grid-template-columns:1fr}}
+  .svc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px;transition:.25s;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:.3s}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(15,37,64,.12);border-color:transparent}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc .ico{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,#eef3fa,#e3ecf8);display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:18px}
+  .svc h3{font-size:20px;margin-bottom:9px;font-family:'Inter';font-weight:700;color:var(--navy)}
+  .svc p{color:var(--muted);font-size:14.5px}
+
+  /* WHY */
+  .why{background:var(--cream)}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+  @media(max-width:820px){.grid4{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.grid4{grid-template-columns:1fr}}
+  .why-item{text-align:center;padding:24px 18px;background:var(--surface);border-radius:16px;border:1px solid var(--line)}
+  .why-item .big{font-family:'Fraunces',serif;font-size:36px;color:var(--gold);margin-bottom:8px;font-weight:600}
+  .why-item h4{color:var(--navy);font-size:16px;margin-bottom:6px;font-family:'Inter';font-weight:700}
+  .why-item p{color:var(--muted);font-size:14px}
+
+  /* PLANES */
+  .planes{background:var(--surface)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  @media(max-width:820px){.pgrid{grid-template-columns:1fr}}
+  .plan{border:1px solid var(--line);border-radius:18px;padding:32px 28px;background:var(--bg);transition:.25s;position:relative}
+  .plan:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(15,37,64,.1)}
+  .plan.feat{background:linear-gradient(150deg,var(--navy),var(--navy2));color:#fff;border-color:transparent;box-shadow:0 26px 60px rgba(11,31,58,.28)}
+  .plan.feat h3,.plan.feat .price{color:#fff}
+  .plan .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-size:11.5px;font-weight:800;padding:5px 14px;border-radius:20px;letter-spacing:.5px}
+  .plan h3{font-family:'Inter';font-weight:700;font-size:19px;margin-bottom:4px;color:var(--navy)}
+  .plan .who{font-size:13px;color:var(--muted);margin-bottom:16px}
+  .plan.feat .who{color:#9fb1c6}
+  .plan .price{font-family:'Fraunces',serif;font-size:34px;color:var(--navy);font-weight:600}
+  .plan .price small{font-family:'Inter';font-size:14px;color:var(--muted);font-weight:500}
+  .plan.feat .price small{color:#9fb1c6}
+  .plan ul{list-style:none;margin:18px 0 24px}
+  .plan li{font-size:14px;padding:7px 0;display:flex;gap:9px;color:var(--ink)}
+  .plan.feat li{color:#d3deec}
+  .plan li::before{content:"✓";color:var(--gold);font-weight:800}
+  .plan.feat li::before{color:var(--gold2)}
+  .plan .btn{width:100%;justify-content:center}
+  .plan:not(.feat) .btn{background:var(--navy);color:#fff;box-shadow:none}
+  .plan-note{text-align:center;color:var(--muted);font-size:14px;margin-top:24px}
+
+  /* PROCESS */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px;counter-reset:s}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+  .step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px 24px 24px}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:-20px;left:24px;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold2);font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(11,31,58,.25)}
+  .step h4{margin:10px 0 6px;font-size:18px;font-family:'Inter';font-weight:700;color:var(--navy)}
+  .step p{color:var(--muted);font-size:14px}
+
+  /* TESTIMONIOS */
+  .testi{background:var(--cream)}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  @media(max-width:820px){.tgrid{grid-template-columns:1fr}}
+  .tcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .tcard .stars{color:var(--gold);font-size:16px;letter-spacing:2px;margin-bottom:12px}
+  .tcard p{color:var(--ink);font-size:15px;font-style:italic;margin-bottom:18px}
+  .tcard .who{display:flex;align-items:center;gap:12px}
+  .tcard .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold2);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces'}
+  .tcard .who b{display:block;color:var(--navy);font-size:14.5px}
+  .tcard .who span{color:var(--muted);font-size:13px}
+
+  /* FAQ */
+  .faq-list{max-width:780px;margin:40px auto 0}
+  .faq{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:20px 22px;font-weight:600;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--gold);font-size:24px;font-weight:400;transition:.2s}
+  .faq[open] summary::after{transform:rotate(45deg)}
+  .faq p{padding:0 22px 20px;color:var(--muted);font-size:15px}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);color:var(--navy);text-align:center;border-radius:24px;padding:60px 28px;position:relative;overflow:hidden}
+  .cta-band::after{content:"";position:absolute;left:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.18)}
+  .cta-band h2{color:var(--navy);font-size:clamp(26px,3.6vw,38px);margin-bottom:12px;position:relative}
+  .cta-band p{color:#5a4a1e;font-size:17px;margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;position:relative}
+  .cta-band .btn{background:var(--navy);color:#fff;position:relative;box-shadow:0 10px 28px rgba(11,31,58,.3)}
+  .cta-band .btn:hover{background:#081831}
+
+  /* CONTACT */
+  .contact{background:var(--surface)}
+  .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
+  @media(max-width:820px){.cgrid{grid-template-columns:1fr}}
+  .cinfo .lead{margin-bottom:26px}
+  .cinfo .ci{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+  .cinfo .ico{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#eef3fa,#e3ecf8);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+  .cinfo b{display:block;color:var(--navy)}
+  .cinfo span{color:var(--muted);font-size:15px}
+  form{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:30px}
+  form label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin:12px 0 5px}
+  form input,form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fff;transition:.2s}
+  form input:focus,form textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,74,.15)}
+  form .btn{width:100%;margin-top:18px;justify-content:center}
+
+  footer{background:var(--navy);color:#9fb1c6;padding:48px 24px 30px;font-size:14px}
+  .fgrid{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:24px;margin-bottom:20px}
+  footer b{color:#fff;font-family:'Fraunces',serif}
+  footer .small{font-size:12.5px;color:#6f8199;text-align:center}
+
+  /* WhatsApp float */
+  .wafloat{position:fixed;right:22px;bottom:22px;z-index:80;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 10px 28px rgba(37,211,102,.45);transition:.25s;animation:pulse 2.4s infinite}
+  .wafloat:hover{transform:scale(1.08)}
+  @keyframes pulse{0%{box-shadow:0 10px 28px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 10px 28px rgba(37,211,102,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 10px 28px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <nav>
+    <a class="brand" href="#top"><span class="logo">MA</span><b>MA Tax &amp; Accounting</b></a>
+    <div class="navlinks">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#planes">Planes</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto" class="btn">Consulta gratis</a>
+    </div>
+  </nav>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div>
+      <span class="tag reveal">✦ CPA con licencia · Puerto Rico</span>
+      <h1 class="reveal d1">Contabilidad que <span class="grad">protege y hace crecer</span> tu negocio.</h1>
+      <p class="reveal d2">Firma puertorriqueña de contabilidad e impuestos. Te llevamos los libros al día, cumplimos con Hacienda y SURI, y te damos números claros para decidir con confianza — con atención personalizada y en tu idioma.</p>
+      <div class="cta reveal d3">
+        <a href="#contacto" class="btn">Solicita tu consulta gratis →</a>
+        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+      </div>
+      <div class="trust reveal d4">
+        <div>🎓 <b>CPA Lic. 7720</b></div>
+        <div>🇵🇷 <b>Expertos en PR</b> · 480 · IVU · SURI</div>
+        <div>💬 <b>Bilingüe</b></div>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="hcard">
+        <div class="hc-top"><div class="seal">MA</div><span class="pill">Al día ✓</span></div>
+        <h4>Resumen del mes</h4>
+        <div class="row"><span>Ingresos registrados</span><b>$42,800</b></div>
+        <div class="row"><span>Gastos conciliados</span><b>$18,240</b></div>
+        <div class="row"><span>IVU · SURI</span><b>Radicado ✓</b></div>
+        <div class="row"><span>Planilla 480</span><b>A tiempo ✓</b></div>
+        <div class="row tot"><span>Ganancia neta</span><b>$24,560</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n" data-count="7720" data-prefix="Lic. ">Lic. 7720</div><div class="l">CPA con licencia</div></div>
+    <div class="stat reveal d1"><div class="n" data-count="100" data-suffix="%">100%</div><div class="l">Enfocados en PR</div></div>
+    <div class="stat reveal d2"><div class="n" data-count="365">365</div><div class="l">Días de respaldo</div></div>
+    <div class="stat reveal d3"><div class="n">1:1</div><div class="l">Trato personalizado</div></div>
+  </div>
+</div>
+
+<!-- NOSOTROS -->
+<section class="about" id="nosotros">
+  <div class="wrap">
+    <p class="eyebrow reveal">Sobre nosotros</p>
+    <h2 class="sec-title reveal d1">Una firma cercana, con el respaldo de un CPA</h2>
+    <p class="lead reveal d2">En MA Tax &amp; Accounting Services creemos que la contabilidad no es solo cumplir — es entender tu negocio para ayudarte a crecer.</p>
+    <div class="about-grid">
+      <div class="reveal d2">
+        <p>Somos una firma de contabilidad e impuestos basada en Puerto Rico, fundada y dirigida por <b>Milton Ayala Irizarry, CPA (Licencia 7720)</b>. Trabajamos con pequeños negocios, profesionales y personas que quieren sus finanzas en orden y sin sorpresas con Hacienda.</p>
+        <p>Nuestro enfoque es <b>personalizado</b>: antes de cotizar, evaluamos tu caso — el tipo de entidad, si estás al día o atrasado, tu volumen y lo que de verdad necesitas. Así armamos una propuesta justa, hecha a tu medida.</p>
+        <p>Combinamos la experiencia de un CPA con <b>tecnología moderna</b> para entregarte estados financieros claros, planillas a tiempo y acompañamiento real todo el año — no solo en temporada de planillas.</p>
+      </div>
+      <div class="card reveal d3">
+        <div class="seal">CPA</div>
+        <h3>Milton Ayala Irizarry</h3>
+        <div class="role">Contador Público Autorizado · Lic. 7720</div>
+        <ul>
+          <li>Experiencia en contabilidad y contribuciones de PR</li>
+          <li>Cumplimiento con Hacienda y SURI</li>
+          <li>Estados financieros y compilation reports</li>
+          <li>Atención directa y personalizada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <p class="eyebrow reveal">Servicios</p>
+    <h2 class="sec-title reveal d1">Todo lo que tu negocio necesita en un solo lugar</h2>
+    <p class="lead reveal d2">Desde la contabilidad del día a día hasta tus planillas — nos encargamos para que tú te enfoques en tu negocio.</p>
+    <div class="grid3">
+      <div class="svc reveal"><div class="ico">📒</div><h3>Contabilidad mensual</h3><p>Iguala contable: llevamos tus libros al día mes a mes, conciliaciones y reportes para que siempre sepas cómo va tu negocio.</p></div>
+      <div class="svc reveal d1"><div class="ico">🧾</div><h3>Planillas e impuestos</h3><p>Planillas corporativas (480.20, 1120), individuales (482) e informativas. Radicación a tiempo y sin estrés.</p></div>
+      <div class="svc reveal d2"><div class="ico">🏛️</div><h3>IVU &amp; SURI</h3><p>Manejo del IVU mensual y cumplimiento en SURI. Evita penalidades por radicaciones tardías o en cero.</p></div>
+      <div class="svc reveal"><div class="ico">📊</div><h3>Estados financieros</h3><p>Estados financieros personales y de negocio, compilation reports y documentos para bancos, préstamos e inversionistas.</p></div>
+      <div class="svc reveal d1"><div class="ico">⏳</div><h3>Puesta al día</h3><p>¿Atrasado en tus libros? Ponemos tu contabilidad al corriente, mes por mes, para que vuelvas a tener control.</p></div>
+      <div class="svc reveal d2"><div class="ico">💼</div><h3>Facturación &amp; nómina</h3><p>Apoyo con facturación y nómina para que cobres a tiempo y cumplas con tus empleados y las agencias.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE -->
+<section class="why" id="porque">
+  <div class="wrap">
+    <p class="eyebrow reveal">Por qué MA Tax</p>
+    <h2 class="sec-title reveal d1">La diferencia de trabajar con nosotros</h2>
+    <div class="grid4">
+      <div class="why-item reveal"><div class="big">CPA</div><h4>Respaldo profesional</h4><p>Tus números los firma un Contador Público Autorizado con licencia.</p></div>
+      <div class="why-item reveal d1"><div class="big">🇵🇷</div><h4>Expertos en PR</h4><p>Conocemos Hacienda, SURI y las formas 480 al derecho y al revés.</p></div>
+      <div class="why-item reveal d2"><div class="big">1:1</div><h4>Trato personalizado</h4><p>Propuestas a la medida, no paquetes genéricos. Hablas directo con la firma.</p></div>
+      <div class="why-item reveal d3"><div class="big">365</div><h4>Todo el año</h4><p>Te acompañamos los 12 meses, no solo en temporada de planillas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section class="planes" id="planes">
+  <div class="wrap">
+    <p class="eyebrow reveal">Planes</p>
+    <h2 class="sec-title reveal d1">Igualas mensuales claras y sin sorpresas</h2>
+    <p class="lead reveal d2">Precios de referencia. El precio final lo ajustamos a tu volumen y necesidad — siempre te lo decimos por adelantado.</p>
+    <div class="pgrid">
+      <div class="plan reveal d1">
+        <h3>Esencial</h3><div class="who">Para quien empieza</div>
+        <div class="price">$300<small>/mes</small></div>
+        <ul><li>Contabilidad mensual</li><li>Conciliación bancaria</li><li>Reporte mensual simple</li><li>Soporte por WhatsApp</li></ul>
+        <a href="#contacto" class="btn">Empezar</a>
+      </div>
+      <div class="plan feat reveal d2">
+        <div class="badge">MÁS POPULAR</div>
+        <h3>Negocio</h3><div class="who">El favorito de los dueños</div>
+        <div class="price">$450<small>/mes</small></div>
+        <ul><li>Todo lo de Esencial</li><li>IVU mensual &amp; SURI</li><li>Estados financieros</li><li>Apoyo en planillas</li><li>Reunión trimestral</li></ul>
+        <a href="#contacto" class="btn">Solicitar propuesta</a>
+      </div>
+      <div class="plan reveal d3">
+        <h3>A tu medida</h3><div class="who">Volumen alto / casos especiales</div>
+        <div class="price">Custom</div>
+        <ul><li>Todo lo de Negocio</li><li>Nómina &amp; facturación</li><li>Puesta al día atrasada</li><li>Planillas corporativas</li><li>Acompañamiento dedicado</li></ul>
+        <a href="#contacto" class="btn">Hablemos</a>
+      </div>
+    </div>
+    <p class="plan-note reveal">💡 ¿No sabes cuál te conviene? Te ayudamos a escoger en la consulta gratis.</p>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal">Cómo trabajamos</p>
+    <h2 class="sec-title reveal d1">Empezar es fácil</h2>
+    <div class="steps">
+      <div class="step reveal d1"><h4>Conversamos</h4><p>Nos cuentas de tu negocio y tu situación. La primera consulta es gratis y sin compromiso.</p></div>
+      <div class="step reveal d2"><h4>Evaluamos tu caso</h4><p>Revisamos tipo de entidad, estado de tus libros y necesidades, y te armamos una propuesta a tu medida.</p></div>
+      <div class="step reveal d3"><h4>Nos encargamos</h4><p>Tomamos las riendas de tu contabilidad y cumplimiento. Tú te enfocas en crecer.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testi">
+  <div class="wrap">
+    <p class="eyebrow reveal">Testimonios</p>
+    <h2 class="sec-title reveal d1">Negocios que duermen tranquilos</h2>
+    <div class="tgrid">
+      <div class="tcard reveal d1"><div class="stars">★★★★★</div><p>"Tenía los libros atrasados y un lío con SURI. En semanas estaba todo al día y por fin entiendo mis números."</p><div class="who"><div class="av">JR</div><div><b>[Cliente — restaurante]</b><span>San Juan, PR</span></div></div></div>
+      <div class="tcard reveal d2"><div class="stars">★★★★★</div><p>"Trato personal de verdad. No es un call center — hablo directo con la firma y siempre me responden."</p><div class="who"><div class="av">LM</div><div><b>[Cliente — consultoría]</b><span>Bayamón, PR</span></div></div></div>
+      <div class="tcard reveal d3"><div class="stars">★★★★★</div><p>"Me ayudaron a montar la contabilidad desde cero cuando abrí. Ojalá los hubiera encontrado antes."</p><div class="who"><div class="av">CE</div><div><b>[Cliente — panadería]</b><span>Caguas, PR</span></div></div></div>
+    </div>
+    <p class="plan-note reveal" style="font-size:12.5px">Testimonios de ejemplo — reemplázalos con reseñas reales de tus clientes.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow reveal" style="text-align:center">Preguntas frecuentes</p>
+    <h2 class="sec-title reveal d1" style="text-align:center">Lo que más nos preguntan</h2>
+    <div class="faq-list">
+      <details class="faq reveal"><summary>¿Cuánto cuesta el servicio?</summary><p>Depende de tu tipo de negocio, volumen y lo que necesites. Por eso evaluamos tu caso antes de cotizar y te damos un precio justo y por adelantado. Las igualas suelen empezar alrededor de $300/mes.</p></details>
+      <details class="faq reveal"><summary>¿Atienden de forma remota?</summary><p>Sí. Trabajamos presencial y remoto en todo Puerto Rico. Puedes enviarnos tus documentos digitalmente y manejamos todo en línea.</p></details>
+      <details class="faq reveal"><summary>Estoy atrasado en mis libros y planillas, ¿me pueden ayudar?</summary><p>Claro. La puesta al día es uno de nuestros servicios — ponemos tu contabilidad al corriente mes por mes y te ayudamos a regularizar tu situación con Hacienda y SURI.</p></details>
+      <details class="faq reveal"><summary>¿Trabajan con la radicación del IVU y SURI?</summary><p>Sí. Manejamos el IVU mensual y todo el cumplimiento en SURI para que evites penalidades por radicaciones tardías o en cero.</p></details>
+      <details class="faq reveal"><summary>¿La primera consulta tiene costo?</summary><p>No. La primera consulta es gratis y sin compromiso. Evaluamos tu caso y te decimos exactamente cómo te podemos ayudar.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:30px 0 60px">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>¿Listo para tener tus finanzas en orden?</h2>
+      <p>Solicita tu consulta gratis. Evaluamos tu caso y te decimos exactamente cómo te podemos ayudar — sin compromiso.</p>
+      <a href="#contacto" class="btn">Solicita tu consulta gratis →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <p class="eyebrow reveal">Contacto</p>
+    <h2 class="sec-title reveal d1">Hablemos de tu negocio</h2>
+    <div class="cgrid">
+      <div class="cinfo reveal d2">
+        <p class="lead">Escríbenos o llámanos. Con gusto te orientamos y coordinamos tu consulta gratis.</p>
+        <div class="ci"><div class="ico">📞</div><div><b>Teléfono</b><span>(939) 375-0884</span></div></div>
+        <div class="ci"><div class="ico">💬</div><div><b>WhatsApp</b><span><a href="https://wa.me/19393750884" target="_blank" style="color:#1eb456;font-weight:600">Escríbenos directo →</a></span></div></div>
+        <div class="ci"><div class="ico">✉️</div><div><b>Email</b><span>[añadir email de la firma]</span></div></div>
+        <div class="ci"><div class="ico">📍</div><div><b>Ubicación</b><span>Puerto Rico · presencial y remoto</span></div></div>
+      </div>
+      <form id="leadForm" class="reveal d3">
+        <label>Nombre</label>
+        <input id="f_nombre" type="text" required placeholder="Tu nombre" />
+        <label>Teléfono o email</label>
+        <input id="f_contacto" type="text" required placeholder="Cómo te contactamos" />
+        <label>¿En qué te podemos ayudar?</label>
+        <textarea id="f_msg" rows="4" placeholder="Cuéntanos brevemente de tu negocio o necesidad"></textarea>
+        <button class="btn" type="submit">Enviar por WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div style="color:#cdd8e6"><b style="font-size:18px">MA Tax &amp; Accounting Services</b><div style="margin-top:6px;font-size:13px">Contabilidad, planillas y cumplimiento en Puerto Rico</div></div>
+    <div style="font-size:13px">Milton Ayala Irizarry, CPA (Lic. 7720) · (939) 375-0884</div>
+  </div>
+  <div class="small">© 2026 MA Tax &amp; Accounting Services. Todos los derechos reservados.</div>
+</footer>
+
+<a class="wafloat" href="https://wa.me/19393750884" target="_blank" aria-label="WhatsApp">💬</a>
+
+<script>
+  // nav scroll shadow
+  const hdr = document.getElementById('hdr');
+  addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 30));
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // count-up stats
+  function animateCount(el) {
+    const target = +el.dataset.count, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    let cur = 0; const step = target / 48;
+    const tick = () => { cur += step; if (cur >= target) { el.textContent = pre + target.toLocaleString() + suf; }
+      else { el.textContent = pre + Math.floor(cur).toLocaleString() + suf; requestAnimationFrame(tick); } };
+    tick();
+  }
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting && e.target.dataset.count) { animateCount(e.target); cio.unobserve(e.target); } });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+  // form -> WhatsApp
+  document.getElementById('leadForm').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const n = document.getElementById('f_nombre').value.trim();
+    const c = document.getElementById('f_contacto').value.trim();
+    const m = document.getElementById('f_msg').value.trim();
+    const txt = `Hola, soy ${n}. Quiero una consulta gratis.%0AContacto: ${c}%0A${m ? 'Necesito: ' + m : ''}`;
+    window.open('https://wa.me/19393750884?text=' + txt, '_blank');
+  });
+</script>
+
+</body>
+</html>
